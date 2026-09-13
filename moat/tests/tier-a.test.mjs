@@ -103,7 +103,7 @@ test("Tier-A reports a simulated missing TypeScript parser without throwing", as
 
 test("Tier-A parser is a production dependency", async () => {
   const packageJson = await readJson(new URL("../package.json", import.meta.url));
-  assert.equal(packageJson.dependencies?.typescript, "5.9.3");
+  assert.equal(packageJson.dependencies?.typescript, "^6.0.3");
   assert.equal(packageJson.devDependencies?.typescript, undefined);
 });
 
